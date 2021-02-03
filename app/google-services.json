@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "844482125940",
+    "project_id": "appagenda-47bb8",
+    "storage_bucket": "appagenda-47bb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844482125940:android:b379befb6742e56e89f121",
+        "android_client_info": {
+          "package_name": "firebase.app.appprueba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844482125940-lrqvkvo205r4n2itdt808js7d54fhuhb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBQ9yhNo4eaXj-2AjKnFgopHokEsAwquk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844482125940-lrqvkvo205r4n2itdt808js7d54fhuhb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

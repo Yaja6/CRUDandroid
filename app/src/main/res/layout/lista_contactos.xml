@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+
+
+    <TextView
+        android:id="@+id/lblNombre"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Nombre:" />
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/lblNombre"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/lblTelefono"
+        android:layout_width="66dp"
+        android:textStyle="bold"
+        android:layout_below="@id/lblNombre"
+        android:layout_height="wrap_content"
+        android:text="Teléfono:" />
+
+    <TextView
+        android:id="@+id/telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre"
+        android:layout_toRightOf="@id/lblTelefono"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/lblfecha"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblTelefono"
+        android:text="Fecha registro:"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fechaReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/telefono"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@id/lblfecha"
+        android:text="TextView" />
+</RelativeLayout>
