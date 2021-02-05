@@ -2,6 +2,7 @@ package firebase.app.appprueba.Modelos;
 
 public class Contacto {
     private String id;
+    private String idUser;
     private String nombre;
     private String telefono;
     private String fecha;
@@ -13,6 +14,13 @@ public class Contacto {
 
     public void setId(String id) {
         this.id = id;
+    }
+    public String getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 
     public String getNombre() {

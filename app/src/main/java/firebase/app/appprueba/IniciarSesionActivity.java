@@ -39,7 +39,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
         bIngresar = (Button)findViewById(R.id.btnIngresar);
 
         bIngresar.setOnClickListener((v)->{
-            correo = etCorreo.getText().toString().trim();
+            correo = etCorreo.getText().toString();
             contra = etContra.getText().toString();
 
             if(!correo.isEmpty() && !contra.isEmpty()){
@@ -52,7 +52,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
 
     public void iniciarSesion(){
 
-        mAuth.signInWithEmailAndPassword(correo, contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+       mAuth.signInWithEmailAndPassword(correo, contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,9 +54,11 @@ public class InicioActivity extends AppCompatActivity {
     private String id = "";
     private String nombre = "";
     private String telefono = "";
-    private String fecha = "";
 
     Contacto contactoSeleccionado;
+
+    //id de usuario actual
+    String idCurrentUser = "";
 
     //FIREBASE
     private FirebaseAuth mAuth;
@@ -69,6 +72,7 @@ public class InicioActivity extends AppCompatActivity {
 
         inicializarFirebase();
         verContactos();
+        idCurrentUser = mAuth.getCurrentUser().getUid(); //toma id del current user
         etNombre = (EditText)findViewById(R.id.nombre);
         etTelefono = (EditText)findViewById(R.id.telefono);
         btnCancelar =(Button) findViewById(R.id.cancelar);
@@ -101,8 +105,12 @@ public class InicioActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 listaContactos.clear();
                 for (DataSnapshot objSnapShot: snapshot.getChildren()){
+
                     Contacto c = objSnapShot.getValue(Contacto.class); //toma todos los datos
-                    listaContactos.add(c);
+                    if(c.getIdUser().equals(idCurrentUser)){ // toma los contactos solo del usuario actual
+                        listaContactos.add(c);
+                    }
+
                 }
 
                 //iniciar adaptador propio
@@ -142,6 +150,7 @@ public class InicioActivity extends AppCompatActivity {
                 }else{
                     Contacto c = new Contacto();
                     c.setId(UUID.randomUUID().toString());
+                    c.setIdUser(idCurrentUser);
                     c.setNombre(nombre);
                     c.setTelefono(telefono);
                     c.setFecha(getFechaNormal(getFechaMiliseg())); //fecha en milisegundos /fechanormal -> fecha normal
@@ -167,6 +176,7 @@ public class InicioActivity extends AppCompatActivity {
         if(validarInputs() == false){
             Contacto c = new Contacto();
             c.setId(contactoSeleccionado.getId());
+            c.setIdUser(idCurrentUser);
             c.setNombre(nombre);
             c.setTelefono(telefono);
             c.setFecha(contactoSeleccionado.getFecha());

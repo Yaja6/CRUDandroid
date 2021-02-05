@@ -19,7 +19,6 @@ public class ListaContactosAdaptador extends BaseAdapter {
     LayoutInflater layoutInflater;
     Contacto contactoModel;
 
-
     public ListaContactosAdaptador(Context context, ArrayList<Contacto> contactoData) {
         this.context = context;
         this.contactoData = contactoData;

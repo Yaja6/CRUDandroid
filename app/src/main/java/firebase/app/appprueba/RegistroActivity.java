@@ -47,7 +47,7 @@ public class RegistroActivity extends AppCompatActivity {
 
         bRegistrar.setOnClickListener((v)->{
             nombre = etNombre.getText().toString();
-            correo = etCorreo.getText().toString().trim();
+            correo = etCorreo.getText().toString();
             contra = etContra.getText().toString();
 
             if(!nombre.isEmpty() && !correo.isEmpty() && !contra.isEmpty()){
