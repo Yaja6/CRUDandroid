@@ -93,12 +93,15 @@ Declaro variables de tipo EditText y Button para tomar los inputs y los botones 
 ![image](https://user-images.githubusercontent.com/56648539/107136013-a6be3600-68cd-11eb-873a-aebad02f6ce3.png) => ![image](https://user-images.githubusercontent.com/56648539/107136021-b63d7f00-68cd-11eb-8966-331d7956747c.png)
 
 Declaro variables de tipo String que tomarán los valores ingresados por el usuario y otra variable de la dependencia de FirebaseAuth
+
 ![image](https://user-images.githubusercontent.com/56648539/107136030-c6555e80-68cd-11eb-898d-311d8bcfad08.png)
 
 Inicializo la instancia de Firebase auth y de RealtimeDatabase:
+
 ![image](https://user-images.githubusercontent.com/56648539/107136032-d705d480-68cd-11eb-93b1-bdbef336ffab.png)
 
 Asigno a las variables, los elementos de la interfaz:
+
 ![image](https://user-images.githubusercontent.com/56648539/107136039-ec7afe80-68cd-11eb-948d-e1664ddcaeca.png)
 
 _Cuando el usuario dé click en el botón de Registrar asigno a las variables declaradas anteriormente los valores ingresados por el usuario  y valido si están vacíos o no. En el caso de haber llenado los campos, llamará a la función de regitrarUsuario()
@@ -108,9 +111,11 @@ _Cuando el usuario dé click en el botón de Registrar asigno a las variables de
 ### Función **registrarUsuario()**
 
 Utilizo la variable que instancia Firebaseauth y uso el método **CreateUserWithEmailAndPassword** dondele paso los valores ingresados por el usuario para crear un usuario. Además de un envento CompleteListener para verificar que la tarea se haya realizado correctamente, en este caso, se crea un objeto con los datos ingresados por el usuario para poder enviarlos a registrar al RealTimeDatabase 
+
 ![image](https://user-images.githubusercontent.com/56648539/107136198-15e85a00-68cf-11eb-9d38-e12525ad4bdb.png)
 
 Para registrar en la base de datos tomo la variable de la instancia de real time datase y creo una rama llamada "Usuarios" y dentro de esta, otra rama con el id del usuario registrado y dentro de este los datos del objeto
+
 ![image](https://user-images.githubusercontent.com/56648539/107136238-74add380-68cf-11eb-9e48-05d736bbdb4d.png)
 
 ## Inicio de sesión: IniciarSesionActivity.java
@@ -124,6 +129,7 @@ Declaro variables de tipo String que tomarán los valores ingresados por el usua
 ![image](https://user-images.githubusercontent.com/56648539/107135774-87bea480-68cb-11eb-862a-4d4858d11e4f.png)
 
 Inicializo la instancia de Firebase auth:
+
 ![image](https://user-images.githubusercontent.com/56648539/107135883-74600900-68cc-11eb-8a27-1c78d5196b11.png)
 
 Asigno a las variables, los elementos de la interfaz:
@@ -136,6 +142,7 @@ _Cuando el usuario dé click en el botón de Ingresar asigno a las variables dec
 ## Función **Iniciar Sesión**
 
 Utilizo la variable que instancia Firebaseauth y uso el método **SignInWithEmailAndPassword** dondele paso los valores ingresados por el usuario. Además de un envento CompleteListener para verificar que la tarea de iniciar sesión se ha realizado correctamente y pueda redirigirse a la pantalla de **Inicio**
+
 ![image](https://user-images.githubusercontent.com/56648539/107135976-462ef900-68cd-11eb-8532-773e8dcf52ea.png)
 
 ## Inicio: CRUD de los contactos - **InicioActivity**
@@ -168,7 +175,8 @@ Asigno a las variables, los elementos de la interfaz:
 ![image](https://user-images.githubusercontent.com/56648539/107136511-ea1aa380-68d1-11eb-96c5-3b9a8afeda95.png)
 
 ## **Función InicializarFirebase()**
-Inicaliza la app de firebase y las variblaes que Aith y Realtime Database 
+Inicaliza la app de firebase y las variblaes que Aith y Realtime Database
+
 ![image](https://user-images.githubusercontent.com/56648539/107136520-0ae2f900-68d2-11eb-86a3-793e41c775b3.png)
 
 ## **Función para Crear un Contacto: nuevTelf()**
@@ -178,6 +186,7 @@ Utilizo un alterdialog para poder mostrar una vista al Layout _insertar.xml_ que
 ![image](https://user-images.githubusercontent.com/56648539/107135141-2516da00-68c6-11eb-97cf-0924f3a376d6.png)
 
 Asigno a las variables, los elementos de la interfaz. Asigno el tipo final a las variables que se asignan a los inputs de la interfaz _insertar.xml_ ya que no se podrán sobreescribir:
+
 ![image](https://user-images.githubusercontent.com/56648539/107136621-108d0e80-68d3-11eb-824b-d425023c5718.png)
 
 **Una vez que el usuario dé clic en el botón de _Agregar contacto_ se le mostrará el alertdialog para que pueda ingresar los datos y se crea una variable de tipo **Contacto** para que obtenga los datos ingresados**
@@ -185,6 +194,7 @@ Asigno a las variables, los elementos de la interfaz. Asigno el tipo final a las
 ![image](https://user-images.githubusercontent.com/56648539/107136672-6cf02e00-68d3-11eb-9795-e908d339c4c0.png)
 
 Una vez que la variable tenga los datos, se creará un registro dentro de la base de datos. Se creará una rama "Contactos" y dentro de este otra rama con los id de los contactos con cada uno de sus datos.
+
 ![image](https://user-images.githubusercontent.com/56648539/107136710-be002200-68d3-11eb-8923-321de1870e69.png)
 
 ## **Función ver contactos: verContactos()**
