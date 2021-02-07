@@ -133,6 +133,7 @@ Inicializo la instancia de Firebase auth:
 ![image](https://user-images.githubusercontent.com/56648539/107135883-74600900-68cc-11eb-8a27-1c78d5196b11.png)
 
 Asigno a las variables, los elementos de la interfaz:
+
 ![image](https://user-images.githubusercontent.com/56648539/107135895-9063aa80-68cc-11eb-9373-5895f069e000.png)
 
 _Cuando el usuario dé click en el botón de Ingresar asigno a las variables declaradas anteriormente los valores ingresados por el usuario  y valido si están vacíos o no. En el caso de haber llenado los campos, llamará a la función de iniciar sesión().
@@ -169,9 +170,11 @@ Una variable de tipo Contacto para tomar los datos del ontacto Seleccionado. Y o
 ![image](https://user-images.githubusercontent.com/56648539/107136463-5ea11280-68d1-11eb-91bd-728bf2f1a7b8.png)
 
 Inicializo la instancia de Firebase auth y de RealtimeDatabase:
+
 ![image](https://user-images.githubusercontent.com/56648539/107136032-d705d480-68cd-11eb-93b1-bdbef336ffab.png)
 
 Asigno a las variables, los elementos de la interfaz:
+
 ![image](https://user-images.githubusercontent.com/56648539/107136511-ea1aa380-68d1-11eb-96c5-3b9a8afeda95.png)
 
 ## **Función InicializarFirebase()**
